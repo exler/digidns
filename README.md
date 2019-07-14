@@ -1,5 +1,7 @@
+<p align="center"><img src="https://images2.imgbox.com/a2/a9/QxtISQz0_o.png"></p>
+
 # badspark
-BadUSB hacking toolkit for Digispark ATtiny85.
+BadUSB hacking toolkit for Digispark ATtiny85. Scripts are prepared for Windows 7+ machines.
 
 ### Requirements
 
