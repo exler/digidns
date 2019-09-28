@@ -1,25 +1,33 @@
 <p align="center"><img src="https://images2.imgbox.com/a2/a9/QxtISQz0_o.png"></p>
 
-# badspark
-BadUSB hacking toolkit for Digispark ATtiny85. Scripts are prepared for Windows 7+ machines.
+# DigiDNS
+DigiDNS uses Digispark's keyboard emulation on unblocked machines and overrides Windows DNS settings, pointing it to a custom Python server that spoofs chosen hosts.
 
-### Requirements
+## Requirements
 
 * Arduino IDE >= 1.6.5 ([configured for Digispark](https://digistump.com/wiki/digispark/tutorials/connecting))
 * Python 3
 
-### Usage
+## Usage
 
+### Host machine
+
+Install Python dependency.
 ```bash
-$ python3 badspark.py [-h] -s SCRIPT -p PORT
+$ pip install dnslib
 ```
 
-### Disclaimer
+Change the `DNS_SERVER` constant in `digidns_windows.ino` file, then upload it to Digispark using Arduino IDE.  
+Use the `--target` and `--source` parameters to add spoofed hosts and run the Python server.
+```bash
+$ sudo python3 digidns.py [-i | --show-ip] [-s | --source] [-t | --target]
+```
+### Target machine
 
-No liability for the damage dealt by this software can be accepted. Built for educational purposes only. This software may contain errors that cause global thermonuclear war. Proceed with caution. 
+Connect the Digispark to an unblocked Windows machine. When the built-in LED starts blinking the script is done and you can disconnect it.
 
-### License
+## License
 
 Copyright (c) 2019 by ***Kamil Marut***.
 
-*badspark* is under the terms of the [MIT License](https://tldrlegal.com/license/mit-license), following all clarifications stated in the [license file](LICENSE).
+*digidns* is under the terms of the [MIT License](https://tldrlegal.com/license/mit-license), following all clarifications stated in the [license file](LICENSE).
