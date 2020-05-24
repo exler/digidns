@@ -1,4 +1,4 @@
-<p align="center"><img src="https://images2.imgbox.com/a2/a9/QxtISQz0_o.png"></p>
+<p align="center"><img src="logo.png"></p>
 
 # DigiDNS
 DigiDNS uses Digispark's keyboard emulation on unblocked machines and overrides Windows DNS settings, pointing it to a custom Python server that spoofs chosen hosts.
